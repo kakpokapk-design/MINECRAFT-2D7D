@@ -14,9 +14,10 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y git zip unzip openjdk-17-jdk python3-pip autoconf libtool pkg-config zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev execstack libstdc++6 ant
-        pip3 install --user buildozer cython virtualenv sh
+        pip3 install --user --upgrade buildozer
         export PATH=$PATH:~/.local/bin
-        buildozer --allow-root android debug
+        buildozer android clean
+        buildozer android debug
     - uses: actions/upload-artifact@v4
       with:
         name: package
