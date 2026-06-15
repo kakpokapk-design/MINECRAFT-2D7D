@@ -9,4 +9,6 @@ requirements = python3,kivy,pillow
 orientation = portrait
 fullscreen = 0
 android.api = 33
+android.archs = arm64-v8a
+android.ndk_api = 21
 android.accept_sdk_license = True
